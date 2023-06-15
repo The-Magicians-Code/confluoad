@@ -5,4 +5,4 @@ Upload files to confluence using Python
 Add your credentials, destination URL and file data into the ``config.ini`` file
 ## Run
 ``python3 upload.py``  
-> Refer to the file content type ([MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)) before uploading to avoid further errors
+> Upon choosing manual upload, refer to the file content type ([MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)) before uploading to avoid further errors
