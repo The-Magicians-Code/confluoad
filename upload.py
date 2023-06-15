@@ -1,6 +1,7 @@
 from configparser import ConfigParser
 from atlassian import Confluence
 from pathlib import Path
+import magic
 
 conf = ConfigParser()
 conf.read("config.ini")
@@ -14,7 +15,7 @@ confluence = Confluence(
     password=conf["Params"]["password"],
     verify_ssl = False
 )
-
+content_type = magic.from_file(conf["File_params"]["absolute_path"]
 # Attach (upload) a file to a page, if it exists it will update the
 # automatically version the new file and keep the old one
-confluence.attach_file(path, name=None, content_type=conf["File_params"]["content_type"], page_id=conf["Params"]["page_id"], title=None, space=None, comment="")
+confluence.attach_file(path, content_type=content_type, mime=True), page_id=conf["Params"]["page_id"])
