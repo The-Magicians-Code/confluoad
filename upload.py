@@ -3,7 +3,7 @@ from atlassian import Confluence
 from pathlib import Path
 
 conf = ConfigParser()
-conf.read("config.ini")
+conf.read("config.cfg")
 
 path = Path(conf["File_params"]["absolute_path"])
 
